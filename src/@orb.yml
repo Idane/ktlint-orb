@@ -2,7 +2,7 @@ version: 2.1
 
 description: >
   A simple orb to handle the installation and utilization of the ktlint linter
-    Installs and utilizes the ktlint linter
+    Installs and utilizes the ktlint linter. Requires java on $PATH.
     https://ktlint.github.io/
 display:
   home_url: "https://www.github.com/idane/ktlint-orb"
