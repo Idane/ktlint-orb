@@ -1,6 +1,6 @@
 version: 2.1
 orbs:
-  ktlint: idane/ktlint@dev:<<pipeline.git.revision>>
+  ktlint: idanelh/ktlint@dev:<<pipeline.git.revision>>
   orb-tools: circleci/orb-tools@11.1
 
 filters: &filters
@@ -26,7 +26,7 @@ workflows:
       - orb-tools/pack:
           filters: *filters
       - orb-tools/publish:
-          orb-name: idane/ktlint
+          orb-name: idanelh/ktlint
           vcs-type: << pipeline.project.type >>
           pub-type: production
           requires:
