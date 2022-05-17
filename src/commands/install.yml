@@ -2,14 +2,15 @@ description: >
   Install ktlint if not already installed
 parameters:
   binary-dir:
+    type: string
     default: /usr/local/bin
     description: >
-      The directory to place the ktlint binary in.
+      The directory to place the ktlint binary in
   version:
     type: string
     default: "0.45.2"
     description: >
-      ktlint version
+      ktlint version to install
 steps:
   - run:
       environment:
