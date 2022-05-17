@@ -3,7 +3,7 @@ description: >
 usage:
   version: 2.1
   orbs:
-    ktlint: idane/ktlint@1.0.0
+    ktlint: idane/ktlint@0.0.1
   jobs:
     lint:
       docker:
