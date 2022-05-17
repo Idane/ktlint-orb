@@ -21,6 +21,9 @@ workflows:
   test-deploy:
     jobs:
       # Make sure to include "filters: *filters" in every test job you want to run as part of your deployment.
+      - ktlint/lint:
+          name: test-lint-job
+          filters: *filters
       - command-tests:
           filters: *filters
       - orb-tools/pack:

@@ -1,0 +1,11 @@
+description: >
+  OpenJDK 11 executor with an optional tag parameter
+docker:
+  - image: "cimg/openjdk:<<parameters.tag>>"
+parameters:
+  tag:
+    default: "11.0"
+    description: >
+      Pick a specific cimg/openjdk image variant:
+      https://hub.docker.com/r/cimg/openjdk/tags
+    type: string

@@ -1,0 +1,28 @@
+description: >
+  Install ktlint and lint the current working directory
+
+executor: default
+
+parameters:
+  binary-dir:
+    type: string
+    default: /usr/local/bin
+    description: >
+      The directory to place the ktlint binary in
+  version:
+    type: string
+    default: "0.45.2"
+    description: >
+      ktlint version to install
+  working-directory:
+    type: string
+    default: "~/project"
+    description: >
+      The directory to activate ktlint in
+steps:
+  - checkout
+  - install:
+      version: <<parameters.version>>
+      binary-dir: <<parameters.binary-dir>>
+  - lint:
+      working-directory: <<parameters.working-directory>>

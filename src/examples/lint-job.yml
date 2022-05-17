@@ -1,0 +1,10 @@
+description: >
+  Shows how to use the lint job
+usage:
+  version: 2.1
+  orbs:
+    ktlint: idanelh/ktlint@0.0.1
+  workflows:
+    example-workflow:
+      jobs:
+        - ktlint/lint
