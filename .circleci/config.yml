@@ -32,7 +32,8 @@ workflows:
           context: ktlint_publish
           filters:
             branches:
-              ignore: /.*/
+              only:
+                - master
             tags:
               only: /v.*/
       # Triggers the next workflow in the Orb Development Kit.
@@ -42,6 +43,7 @@ workflows:
           requires: [orb-tools/publish]
           filters:
             branches:
-              ignore: /.*/
+              only:
+                - master
             tags:
               only: /v.*/

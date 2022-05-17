@@ -32,7 +32,7 @@ workflows:
           requires:
             - orb-tools/pack
             - command-tests
-          context: orb-publishing
+          context: ktlint_publish
           filters:
             branches:
               ignore: /.*/
