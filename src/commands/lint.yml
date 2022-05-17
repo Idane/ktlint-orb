@@ -1,0 +1,14 @@
+description: >
+  Run ktlint lint
+parameters:
+  working-directory:
+    type: string
+    default: "~/project"
+    description: >
+      The directory to activate ktlint in
+steps:
+  - run:
+      name: Lint
+      environment:
+        KTLINT_WORKING_DIRECTORY: <<parameters.working-directory>>
+      command: ktlint ${KTLINT_WORKING_DIRECTORY}

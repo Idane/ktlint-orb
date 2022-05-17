@@ -1,0 +1,20 @@
+description: >
+  Shows how to install and lint with the orb
+usage:
+  version: 2.1
+  orbs:
+    ktlint: idane/ktlint@1.0.0
+  jobs:
+    lint:
+      docker:
+        - image: cimg/base:lts
+      steps:
+        - checkout
+        - ktlint/install:
+            version: 0.45.2 # default
+        - ktlint/lint:
+            working-directory: ~/project #default
+  workflows:
+    example-workflow:
+      jobs:
+        - lint
