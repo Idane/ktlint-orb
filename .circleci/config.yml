@@ -11,15 +11,15 @@ filters: &filters
 workflows:
   lint-pack:
     jobs:
-      - orb-tools/lint:
-          filters: *filters
-      - orb-tools/pack:
-          filters: *filters
-      - orb-tools/review:
-          filters: *filters
+      - orb-tools/lint
+        # filters: *filters
+      - orb-tools/pack
+        # filters: *filters
+      - orb-tools/review
+        # filters: *filters
       - shellcheck/check:
           exclude: SC2148,SC2038,SC2086,SC2002,SC2016
-          filters: *filters
+          # filters: *filters
       - orb-tools/publish:
           orb-name: idane/ktlint
           vcs-type: << pipeline.project.type >>
