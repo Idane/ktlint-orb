@@ -4,10 +4,6 @@ orbs:
   orb-tools: circleci/orb-tools@11.1
   shellcheck: circleci/shellcheck@3.1
 
-filters: &filters
-  tags:
-    only: /v.*/
-
 workflows:
   lint-pack:
     jobs:
@@ -23,10 +19,18 @@ workflows:
             [orb-tools/lint, orb-tools/review, orb-tools/pack, shellcheck/check]
           # Use a context to hold your publishing token.
           context: ktlint-orb
-          filters: *filters
+          filters:
+            branches:
+              ignore: /.*/
+            tags:
+              only: /^v.*/
       # Triggers the next workflow in the Orb Development Kit.
       - orb-tools/continue:
           pipeline-number: << pipeline.number >>
           vcs-type: << pipeline.project.type >>
           requires: [orb-tools/publish]
-          filters: *filters
+          filters:
+            branches:
+              ignore: /.*/
+            tags:
+              only: /^v.*/
