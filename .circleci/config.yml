@@ -6,7 +6,7 @@ orbs:
 
 filters: &filters
   tags:
-    only: /.*/
+    only: /v.*/
 
 workflows:
   lint-pack:
