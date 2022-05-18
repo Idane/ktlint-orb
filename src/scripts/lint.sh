@@ -1,0 +1,1 @@
+ktlint --relative "$CIRCLE_WORKING_DIRECTORY/**.kt" "$CIRCLE_WORKING_DIRECTORY/**.kts"

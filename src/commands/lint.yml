@@ -3,7 +3,7 @@ description: >
 parameters:
   working-directory:
     type: string
-    default: "~/project"
+    default: CIRCLE_WORKING_DIRECTORY
     description: >
       The directory to activate ktlint in
 steps:
@@ -11,4 +11,4 @@ steps:
       name: Lint
       environment:
         KTLINT_WORKING_DIRECTORY: <<parameters.working-directory>>
-      command: ktlint ${KTLINT_WORKING_DIRECTORY}
+      command: <<include(scripts/lint.sh)>>
