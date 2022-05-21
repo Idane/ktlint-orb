@@ -8,7 +8,7 @@ parameters:
       The directory to activate ktlint in
 steps:
   - run:
-      name: Lint
+      name: Lint <<parameters.working-directory>>
       environment:
         KTLINT_WORKING_DIRECTORY: <<parameters.working-directory>>
       command: <<include(scripts/lint.sh)>>

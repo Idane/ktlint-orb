@@ -16,5 +16,5 @@ steps:
       environment:
         KTLINT_VERSION: <<parameters.version>>
         KTLINT_BINARY_DIR: <<parameters.binary-dir>>
-      name: Install ktlint
+      name: Install ktlint version <<parameters.version>> to <<parameters.binary-dir>>
       command: <<include(scripts/install_ktlint.sh)>>
