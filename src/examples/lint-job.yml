@@ -3,7 +3,7 @@ description: >
 usage:
   version: 2.1
   orbs:
-    ktlint: idanelh/ktlint@0.0.1
+    ktlint: idanelh/ktlint@1.0.1
   workflows:
     example-workflow:
       jobs:
