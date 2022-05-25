@@ -1,6 +1,6 @@
 # ktlint CircleCI Orb
 
-[![CircleCI Orb Version](https://badges.circleci.com/orbs/idanelh/ktlint.svg)](https://circleci.com/orbs/registry/orb/idanelh/ktlint)
+[![CircleCI Orb Version](https://badges.circleci.com/orbs/idanelh/ktlint.svg?1)](https://circleci.com/orbs/registry/orb/idanelh/ktlint)
 [![CircleCI](https://img.shields.io/circleci/build/github/Idane/ktlint-orb/master)](https://circleci.com/gh/Idane/ktlint-orb/tree/master)
 [![GitHub](https://img.shields.io/github/license/idane/ktlint-orb)](https://github.com/idane/ktlint-orb/blob/master/LICENSE)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](https://github.com/idane/ktlint-orb/issues)
